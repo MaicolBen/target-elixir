@@ -29,3 +29,15 @@ config :phoenix, :template_engines,
   haml: PhoenixHaml.Engine
 
 import_config "#{Mix.env}.exs"
+
+# %% Coherence Configuration %%   Don't remove this line
+config :coherence,
+  user_schema: Target.Coherence.User,
+  repo: Target.Repo,
+  module: Target,
+  web_module: TargetWeb,
+  router: TargetWeb.Router,
+  messages_backend: TargetWeb.Coherence.Messages,
+  logged_out_url: "/",
+  opts: [:authenticatable, :registerable]
+# %% End Coherence Configuration %%
