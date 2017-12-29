@@ -9,6 +9,7 @@
     %meta{content= "", name= "author"}
     %title Hello Target!
     %link{href= "#{static_path(@conn, "/css/app.css")}", rel= "stylesheet"}
+    %link{href= "https://fonts.googleapis.com/css?family=Open+Sans", rel= "stylesheet"}
   %body
     = render @view_module, @view_template, assigns
     %script{src= "#{static_path(@conn, "/js/app.js")}"}

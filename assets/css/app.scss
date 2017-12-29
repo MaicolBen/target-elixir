@@ -21,6 +21,24 @@ a {
   }
 }
 
+.home-menu {
+  display: flex;
+  width: 25%;
+  text-align: left;
+
+  .home-close-button {
+    width: 20%;
+    font-weight: bold;
+  }
+
+  .home-links {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    letter-spacing: 2.7px;
+  }
+}
+
 .home-title {
   font-family: $font-family;
   font-size: 2.2rem;
@@ -84,6 +102,11 @@ form {
 
 .login-form-group-submit {
   display: grid;
+
+  a {
+    font-size: 1.35rem;
+    font-weight: 600;
+  }
 }
 
 .signup-links {
@@ -91,7 +114,9 @@ form {
 
   a.facebook {
     text-transform: uppercase;
-    font-size: 1.33rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2.4px;
   }
 
   hr {

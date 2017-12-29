@@ -1,6 +1,11 @@
 .login-container
   %section.login-side
     .home-menu
+      .home-close-button
+        %a="X"
+      .home-links
+        %a="ABOUT"
+        %a="CONTACT"
     .home-introduction
       = img_tag(static_path(@conn, "/images/smilies.svg"))
       %h1.home-title="TARGET MVD"
@@ -24,7 +29,7 @@
 
         .form-group.login-form-group-submit
           = submit dgettext("coherence", "Sign In"), class: "button-primary"
-          = link dgettext("coherence", "Forgot your password"), to: password_path(@conn, :new), class: "btn"
+          = link dgettext("coherence", "Forgot your password?"), to: password_path(@conn, :new), class: "btn"
 
         .signup-links
           %a.facebook="Connect with Facebook"
