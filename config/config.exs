@@ -39,5 +39,5 @@ config :coherence,
   router: TargetWeb.Router,
   messages_backend: TargetWeb.Coherence.Messages,
   logged_out_url: "/",
-  opts: [:authenticatable, :registerable]
+  opts: [:authenticatable, :registerable, :recoverable]
 # %% End Coherence Configuration %%

@@ -7,7 +7,10 @@ defmodule Target.Repo.Migrations.CreateCoherenceUser do
       add :email, :string
       # authenticatable
       add :password_hash, :string
-      
+      # recoverable
+      add :reset_password_token, :string
+      add :reset_password_sent_at, :utc_datetime
+
       timestamps()
     end
     create unique_index(:users, [:email])
