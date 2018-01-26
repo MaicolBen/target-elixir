@@ -41,6 +41,14 @@ defmodule TargetWeb.Router do
     get "/", PageController, :index
   end
 
+  scope "/auth", TargetWeb do
+    pipe_through :browser
+
+    get "/:provider", AuthController, :request
+    get "/:provider/callback", AuthController, :callback
+    post "/:provider/callback", AuthController, :callback
+  end
+
   # scope "/", TargetWeb do
   #   pipe_through :protected
   #
