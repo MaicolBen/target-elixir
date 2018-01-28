@@ -20,7 +20,7 @@ defmodule Target.Mixfile do
   def application do
     [
       mod: {Target.Application, []},
-      extra_applications: [:logger, :runtime_tools, :coherence]
+      extra_applications: [:logger, :runtime_tools, :coherence, :ueberauth_facebook]
     ]
   end
 
@@ -43,7 +43,8 @@ defmodule Target.Mixfile do
       {:cowboy, "~> 1.0"},
       {:phoenix_haml, "~> 0.2"},
       {:credo, "~> 0.8", only: [:dev, :test], runtime: false},
-      {:coherence, "~> 0.5"}
+      {:coherence, "~> 0.5"},
+      {:ueberauth_facebook, "~> 0.7"}
     ]
   end
 

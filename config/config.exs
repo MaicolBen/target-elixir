@@ -41,3 +41,13 @@ config :coherence,
   logged_out_url: "/",
   opts: [:authenticatable, :registerable, :recoverable]
 # %% End Coherence Configuration %%
+
+config :ueberauth, Ueberauth,
+   providers: [
+     facebook: { Ueberauth.Strategy.Facebook, [] }
+   ]
+
+config :ueberauth, Ueberauth.Strategy.Facebook.OAuth,
+    client_id: System.get_env("FACEBOOK_CLIENT_ID"),
+    client_secret: System.get_env("FACEBOOK_CLIENT_SECRET"),
+    redirect_uri: System.get_env("FACEBOOK_REDIRECT_URI")
