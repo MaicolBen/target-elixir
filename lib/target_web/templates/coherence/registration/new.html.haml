@@ -1,0 +1,18 @@
+.login-container
+  %section.login-side
+    .home-menu
+      .home-close-button
+        %a="X"
+      .home-links
+        %a="ABOUT"
+        %a="CONTACT"
+    .home-introduction
+      = img_tag(static_path(@conn, "/images/smilies.svg"))
+      %h1.home-title="TARGET MVD"
+      %h3.home-subtitle="Find people near you & Connect"
+      %p.home-description="Create a target  wherever on the map, specify your interest: Travel, Dating, Music, etc and start conecting with others who share your interest."
+    .login-form
+      %br
+      = render "form.html", changeset: @changeset, label: dgettext("coherence", "Register"), required: [required: ""], action: registration_path(@conn, :create)
+  %section.mobile-promo
+    = img_tag(static_path(@conn, "/images/mobile-promo.png"))

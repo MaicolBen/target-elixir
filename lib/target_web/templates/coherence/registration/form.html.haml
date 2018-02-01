@@ -1,0 +1,26 @@
+- form_for @changeset, @action, [as: :registration], fn f  ->
+
+  .form-group
+    = label f, dgettext("coherence", "Name"), class: "control-label"
+    = text_input f, :name, class: "login-field", required: ""
+    = error_tag f, :name
+  .form-group
+    - login_field = Coherence.Config.login_field
+    = label f, login_field, class: "control-label"
+    = text_input f, login_field, class: "login-field", required: ""
+    = error_tag f, login_field
+  .form-group
+    = label f, dgettext("coherence", "Password"), class: "control-label"
+    = password_input f, :password, class: "login-field", required: ""
+    = error_tag f, :password
+  .form-group
+    = label f, dgettext("coherence", "Password Confirmation"), class: "control-label"
+    = password_input f, :password_confirmation, class: "login-field", required: ""
+    = error_tag f, :password_confirmation
+  .form-group
+    = label f, :gender, class: "control-label"
+    = multiple_select f, :gender, ['Female': 1, 'Male': 2], class: "login-field", required: ""
+    = error_tag f, :gender
+
+  .form-group.login-form-group-submit
+    = submit dgettext("coherence", "Sign Up"), class: "button-primary"
