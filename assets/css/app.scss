@@ -131,3 +131,16 @@ form {
     letter-spacing: 0.2rem;
   }
 }
+
+.home-container {
+  display: flex;
+
+  .options-navbar {
+    width: 20%
+  }
+
+  .map {
+    width: 80%;
+    height: 500px;
+  }
+}
